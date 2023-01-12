@@ -1,5 +1,5 @@
 'use strict'
-function getArrayParams(arr) {
+function getArrayParams(...arr) {
   let min = Infinity;
   let max = -Infinity;
   let sum = 0;
@@ -10,7 +10,8 @@ function getArrayParams(arr) {
   }
   min = Math.min(...arr);
   max = Math.max(...arr);
-  avg = Number((sum / arr.length).toFixed(2));
+
+  avg = parseFloat((sum / arr.length).toFixed(2));
     
     return { min: min, max: max, avg: avg };
   }
